@@ -1,0 +1,15 @@
+* Path to the test bench file
+.INCLUDE sumator4_tb.sp
+* Path to the models
+.include psp102_nmos.mod
+.include psp102_pmos.mod
+* Simulation setting
+.control
+
+TRAN 0.01n 2n 0
+
+
+plot V(SUM0) V(SUM1) V(SUM2) V(SUM3) V(CARRY3) V(C0)
+
+.endc
+.end
